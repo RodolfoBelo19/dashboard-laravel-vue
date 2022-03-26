@@ -1,6 +1,6 @@
 <template>
     <Dashboard>
-        <template v-slot:slot-pages> Home </template>
+        <template v-slot:slot-pages> Products </template>
     </Dashboard>
 </template>
 

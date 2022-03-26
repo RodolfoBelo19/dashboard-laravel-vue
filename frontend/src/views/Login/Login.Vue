@@ -1,5 +1,5 @@
 <template>
-    <div class="main">
+    <section class="main">
         <div class="container">
             <div class="login">
                 <header>Connect to account</header>
@@ -69,7 +69,7 @@
             </div>
         </div>
         
-    </div>
+    </section>
 </template>
 
 <script>
@@ -93,6 +93,8 @@ export default {
     * {
         margin: 0;
         padding: 0;
+        background: rgb(37, 37, 37);
+
     }
 
     .container {
