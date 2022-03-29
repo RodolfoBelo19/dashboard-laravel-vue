@@ -1,6 +1,6 @@
 <template>
   <div class="navbar">
-    <h3 class="logo">Logo</h3>
+    <img src="../../assets/logo.png" class="logo"/>
     <div class="logout">
       <a @click.prevent="logout" href="#"
       >Sair
@@ -31,7 +31,7 @@ export default {
 }
 
 .logo {
-  color: #fff;
+  width: 100px;
 }
 
 .logout > a {
