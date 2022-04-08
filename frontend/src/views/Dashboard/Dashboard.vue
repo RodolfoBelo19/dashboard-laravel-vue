@@ -36,21 +36,23 @@
 .main {
     width: 100%;
     background: rgb(29, 29, 29);
-    height: 100vh;
+    height: 1300px;
     display: flex;
+    min-height: 100vh;
 }
 
 .content-right {
     width: 100%;
-    background: gray;
+    /* background: gray; */
     height: 100vh;
     z-index: 10;
 }
 
 .pages {
-    background: #fff;
+    /* background: #fff; */
     width: 100%;
     padding: 20px;
+    background: rgb(37, 37, 37);
 }
 
 </style>

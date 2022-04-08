@@ -16,6 +16,11 @@
         </router-link>
       </li>
       <li>
+        <router-link :to="{ name: 'clients'}"
+        ><i class="fa fa-user"></i>Clientes
+        </router-link>
+      </li>
+      <li>
         <router-link :to="{ name: 'products'}"
         ><i class="fa fa-box"></i>Produtos
         </router-link>
@@ -41,12 +46,12 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 
 .sidebar {
   width: 220px;
   height: 100vh;
-  background: rgb(37, 37, 37);
+  /* background: rgb(37, 37, 37); */
   filter: brightness(120%);
 }
 

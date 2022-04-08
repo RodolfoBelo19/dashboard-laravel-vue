@@ -22,12 +22,13 @@ export default {
 }
 </script>
 
-<style>
+<style scopeds> 
 
 .navbar {
   height: 50px;
   background: rgb(37, 37, 37);
   width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
 
 .logo {
