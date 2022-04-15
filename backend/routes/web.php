@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Controllers\Test;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +13,6 @@ use App\Controllers\Test;
 |
 */
 
-Route::get('/', function () {
+Route::get('/old', function () {
     return view('welcome');
 });

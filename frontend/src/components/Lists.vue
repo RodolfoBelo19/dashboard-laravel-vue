@@ -10,9 +10,9 @@
                 </tr>
             </thead>
             <tbody>
-                <tr v-for="user in data" :key="user.id">
-                    <td>{{ user.name }}</td>
-                    <td>{{ user.username }}</td>
+                <tr v-for="item in data" :key="item.id">
+                    <td>{{ item.name }}</td>
+                    <td>{{ (description == 'Clientes') ? item.username : item.value }}</td>
                 </tr>
             </tbody>
         </table>

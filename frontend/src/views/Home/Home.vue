@@ -4,16 +4,16 @@
             <div>
                 <div class="row">
                     <div class="center col-12 col-md-3 col-sm-6">
-                        <Cards :type="'Clientes'" :percentual="2" :icon="'fa-users'" :qtd="12"/> 
+                        <Cards :type="'Clientes'" :percentual="2" :icon="'fa-users'" :qtd="clients.length"/> 
                     </div>   
                     <div class="center col-12 col-md-3 col-sm-6">
-                        <Cards :type="'Produtos'" :percentual="1" :icon="'fa-box'" :qtd="3"/> 
+                        <Cards :type="'Produtos'" :percentual="1" :icon="'fa-box'" :qtd="products.length"/> 
                     </div>   
                     <div class="center col-12 col-md-3 col-sm-6">
-                        <Cards :type="'Serviços'" :percentual="5" :icon="'fa-store'" :qtd="2"/> 
+                        <Cards :type="'Serviços'" :percentual="5" :icon="'fa-store'" :qtd="services.length"/> 
                     </div>  
                     <div class="center col-12 col-md-3 col-sm-6">
-                        <Cards :type="'Relatórios'" :percentual="3" :icon="'fa-chart-bar'" :qtd="9"/> 
+                        <Cards :type="'Relatórios'" :percentual="3" :icon="'fa-chart-bar'" :qtd="charts.length"/> 
                     </div>
                 </div> 
             </div>
@@ -21,10 +21,10 @@
             <div>
                 <div class="row row-align">
                     <div class="col-12 col-md-6">
-                        <Lists :data="data" description="Clientes" :column="['Nome', 'Usuário']"/>
+                        <Lists :data="clients" description="Clientes" :column="['Nome', 'Usuário']"/>
                     </div>
                     <div class="col-12 col-md-6">
-                        <Lists :data="data" description="Produtos" :column="['Nome', 'Valor']"/>
+                        <Lists :data="products" description="Produtos" :column="['Nome', 'Valor']"/>
                     </div>
                 </div>
             </div>
@@ -44,9 +44,12 @@ export default {
 
     data() {
         return {
-            data: [],
-            description: '',
-            column: [],
+            clients: [],
+            products: [],
+            services: [],
+            charts: [],
+            // description: '',
+            // column: [],
         }
     },
     mounted() {
@@ -54,9 +57,12 @@ export default {
     },
     methods: {
         async getUsers() {
-            const response = await axios.get('https://jsonplaceholder.typicode.com/users/')
 
-            this.data = response.data
+            const response = await axios.get('http://localhost:8000/api/v1')
+
+            this.clients = response.data.clients
+            this.products = response.data.products
+            console.log(this.clients, this.products)
         }
     },
 
